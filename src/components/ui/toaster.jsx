@@ -1,12 +1,12 @@
 import { useToast } from "./use-toast"
-  import {
+import {
   Toast,
   ToastClose,
   ToastDescription,
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from "@/components/ui/toast";
+} from "./toast";
 
 export function Toaster() {
   const { toasts } = useToast();
