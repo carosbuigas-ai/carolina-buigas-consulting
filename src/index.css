@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 15% 5%;
+    --foreground: 43 21% 94%;
+    --card: 218 18% 9%;
+    --card-foreground: 43 21% 94%;
+    --popover: 218 18% 9%;
+    --popover-foreground: 43 21% 94%;
+    --primary: 212 60% 66%;
+    --primary-foreground: 210 15% 5%;
+    --secondary: 218 22% 12%;
+    --secondary-foreground: 43 21% 94%;
+    --muted: 218 22% 12%;
+    --muted-foreground: 210 18% 58%;
+    --accent: 212 60% 66%;
+    --accent-foreground: 210 15% 5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 218 18% 15%;
+    --input: 218 18% 12%;
+    --ring: 212 53% 62%;
+    --radius: 0rem;
+
+    --parchment: 43 21% 94%;
+    --obsidian: 210 15% 5%;
+    --surface: 218 22% 11%;
+    --steel-navy: 212 60% 66%;
+    --slate-mist: 210 18% 58%;
+
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 210 15% 5%;
+    --sidebar-foreground: 43 21% 94%;
+    --sidebar-primary: 212 53% 62%;
+    --sidebar-primary-foreground: 210 15% 5%;
+    --sidebar-accent: 218 18% 9%;
+    --sidebar-accent-foreground: 43 21% 94%;
+    --sidebar-border: 218 18% 15%;
+    --sidebar-ring: 212 53% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid hsl(var(--steel-navy));
+    outline-offset: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
