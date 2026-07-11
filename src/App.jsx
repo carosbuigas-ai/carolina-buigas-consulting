@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Perspectives from './pages/Perspectives';
+import HealthcareAIMarketing from './pages/HealthcareAIMarketing';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -42,6 +43,7 @@ const AuthenticatedApp = () => {
       <Route path="/about" element={<About />} />
       <Route path="/perspectives" element={<Perspectives />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/healthcare-ai-marketing" element={<HealthcareAIMarketing />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

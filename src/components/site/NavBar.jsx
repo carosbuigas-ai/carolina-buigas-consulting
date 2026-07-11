@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
+  { label: "AI Marketing", path: "/healthcare-ai-marketing" },
   { label: "Perspectives", path: "/perspectives" },
   { label: "Contact", path: "/contact" },
 ];
@@ -18,7 +19,7 @@ export default function NavBar() {
           to="/"
           className="font-heading text-base md:text-lg text-parchment font-bold tracking-tight hover:text-steel-navy transition-colors"
         >
-          Carolina Buigas
+          Carolina Buigas Arguelles
         </Link>
         <div className="flex items-center gap-5 md:gap-8">
           {NAV_LINKS.map((link) => {

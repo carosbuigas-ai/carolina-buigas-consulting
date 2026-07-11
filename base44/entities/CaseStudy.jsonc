@@ -1,0 +1,68 @@
+{
+  "name": "CaseStudy",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "client_segment": {
+      "type": "string",
+      "title": "Client Segment",
+      "enum": [
+        "Health Systems",
+        "Payers",
+        "Employers",
+        "Brokers",
+        "Digital Health",
+        "Biopharma"
+      ],
+      "default": "Digital Health"
+    },
+    "service_area": {
+      "type": "string",
+      "title": "Service Area",
+      "enum": [
+        "Positioning & Go-to-Market",
+        "Thought Leadership & Visibility",
+        "Growth & Marketing Ops"
+      ],
+      "default": "Positioning & Go-to-Market"
+    },
+    "outcome": {
+      "type": "string",
+      "title": "Outcome"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Published Date"
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": null,
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
