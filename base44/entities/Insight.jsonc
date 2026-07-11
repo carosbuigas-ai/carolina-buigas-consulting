@@ -1,0 +1,61 @@
+{
+  "name": "Insight",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "content": {
+      "type": "string",
+      "title": "Content"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "Market Strategy",
+        "Thought Leadership",
+        "Growth Operations",
+        "Positioning"
+      ],
+      "default": "Market Strategy"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Published Date"
+    },
+    "author": {
+      "type": "string",
+      "title": "Author",
+      "default": "Carolina Buigas Arguelles"
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": null,
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

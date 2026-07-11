@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function FinalCtaSection() {
   return (
@@ -28,18 +29,29 @@ export default function FinalCtaSection() {
           </a>
         </div>
 
-        <div className="mt-24 pt-8 border-t border-steel-navy/15 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-24 pt-8 border-t border-steel-navy/15 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="font-mono text-xs text-slate-mist">
             &copy; {new Date().getFullYear()} Carolina Buigas Arguelles
           </p>
-          <a
-            href="https://www.linkedin.com/in/carolina-buigas-arguelles-66512835"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-xs text-slate-mist hover:text-steel-navy transition-colors"
-          >
-            LinkedIn &rarr;
-          </a>
+          <div className="flex items-center gap-6">
+            <Link to="/about" className="font-mono text-xs text-slate-mist hover:text-steel-navy transition-colors tracking-[0.1em] uppercase">
+              About
+            </Link>
+            <Link to="/perspectives" className="font-mono text-xs text-slate-mist hover:text-steel-navy transition-colors tracking-[0.1em] uppercase">
+              Perspectives
+            </Link>
+            <Link to="/contact" className="font-mono text-xs text-slate-mist hover:text-steel-navy transition-colors tracking-[0.1em] uppercase">
+              Contact
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/carolina-buigas-arguelles-66512835"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-slate-mist hover:text-steel-navy transition-colors"
+            >
+              LinkedIn &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </footer>
